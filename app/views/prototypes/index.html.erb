@@ -1,0 +1,10 @@
+<main class="main">
+    <%= link_to image_tag("phonto.PNG", class: :top__image), new_user_session_path %>
+  <div class="inner">
+   
+    <div class="card__wrapper">
+      <%= render partial: 'prototype', collection: @prototypes %>
+    </div>
+  </div>
+</main>
+

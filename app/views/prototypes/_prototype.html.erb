@@ -1,0 +1,16 @@
+<div class="card">
+    <%= link_to image_tag(prototype.image, class: :card__img ), prototype_path(prototype) %>  
+  <div class="card__body">
+    <p class = top__country>
+      <%= prototype.country.name %>
+    </p>
+      <p class = top__title>    
+      <%= link_to prototype.title, prototype_path(prototype), class: :card__title%>
+    </p>
+    <% if user_signed_in? %>
+      <p class="card__summary">
+      </p>
+      <%= link_to "by #{prototype.user.name}", "user_path(prototype.user)", class: :card__user %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<%= form_with model: prototype, local: true do |f|%>
+  <div class="field">
+    <%= f.label :title,"写真のタイトル" %><br />
+    <%= f.text_field :title, id:"prototype_title" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country, "country" %><br />
+    <%= f.collection_select(:country_id, Country.all, :id, :name, {},  {class:"form__text"}) %>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :access, "アクセス" %><br />
+    <%= f.text_area :access, class: :form__text, id:"prototype_concept" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :information, "information" %><br />
+    <%= f.text_area :information, class: :form__text, id:"prototype_information"%>
+  </div> 
+
+  <div class="field">
+    <%= f.label :image, "プロトタイプの画像" %><br />
+    <%= f.file_field :image, id:"prototype_image" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
