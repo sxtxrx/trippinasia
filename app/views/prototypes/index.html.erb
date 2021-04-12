@@ -1,7 +1,13 @@
 <main class="main">
     <%= link_to image_tag("phonto.PNG", class: :top__image), new_user_session_path %>
   <div class="inner">
-   
+    <% if user_signed_in? %>
+      <div class="greeting">  
+        <i class="fas fa-user-check"></i>
+          <%= link_to "#{current_user.name}さん", user_path(current_user), class: :greeting__link%>
+        </i>
+      </div>
+    <% end %>
     <div class="card__wrapper">
       <%= render partial: 'prototype', collection: @prototypes %>
     </div>

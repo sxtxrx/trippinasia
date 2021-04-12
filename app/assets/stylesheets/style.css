@@ -103,7 +103,7 @@ a {
 /* headerのrooms */
 
   .nav__rooms{  
-    width: 1024px;  
+    width: 1024px;
     display: flex;
     justify-content:space-between;
     margin: auto;
@@ -178,14 +178,19 @@ body{
 .greeting__link{
   text-decoration: underline;
   font-size: 30px;
- margin: 50px 0 0 30px;
-
+ margin: 50px 0 0 0px;
 }
+.fa-user-check{
+  font-size: 30px;
+  
+}
+
 .page-heading {
   font-size: 40px;
   margin-bottom: 28px;
 }
 .card__wrapper {
+  padding-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -246,12 +251,24 @@ body{
   margin: 0 auto;
   padding: 16px 0;
 }
+.like-btn-show{
+  font-size: 20px;
+text-align: left;
+padding-left: 100px;
+
+}
+
+.fa-thumbs-up{
+  color: rgb(175, 7, 7);
+}
+
 .prototype__detail{
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-bottom: 8px;
   border-bottom:1px grove darkslategray;
+
 }
 .detail__title{
   font-size: 30px;
@@ -289,18 +306,48 @@ body{
 
 .comments_lists{
   padding-left: 20px;
-}
 
+}
+ 
+.delete_comment__btn {
+color: darkred;
+font-size: 1px;
+text-decoration: underline;
+
+}
 .comments_list{
-  list-style-type: square;
   padding-bottom: 5px;
-  
+  border-bottom: dimgray 1px solid;
 }
-
+.comments_list li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  position: relative;
+  padding: 0 0 0 1em;
+  margin: 0;
+}
+ul li::before {
+  position: absolute;
+  padding-top: 0.2em;
+  left: 0;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f501';
+  color: #2d0bf0;
+}
 .comment_user{
   font-size: 16px;
-  color: #3b4043;
-  text-decoration: underline;
+  color: rgba(32, 32, 236, 0.582);
+  text-decoration: underline rgba(32, 32, 236, 0.582);
+  margin-right: 0.5em;
+  
+}
+.comment_user:hover{
+  color: rgba(3, 3, 230, 0.774);
+
 }
 
 /* ユーザーページ */
@@ -309,21 +356,23 @@ body{
 }
 .table{
   border-collapse: collapse;
-  margin-bottom: 32px;
+  margin-bottom: 200px;
   width: 50%;
 }
 .table__col1{
   text-align: left;
   font-weight: bold;
-  background: #fafafa;
+  font-size: x-large;
+  background-color: #abc098;;
   border-collapse: collapse;
-  border: 1px solid #f5f5f5;
+  border: 1px solid darkslategray;
   width: 30%;
   padding: 8px;
 }
 .table__col2{
   text-align: left;
-  border: 1px solid #f5f5f5;
+  font-size: larger;
+  border: 1px solid darkslategray;
   border-collapse: collapse;
   width: 70%;
   padding: 16px 8px;

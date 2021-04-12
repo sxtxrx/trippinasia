@@ -1,0 +1,13 @@
+<% if prototype.liked_by?(current_user) %>
+   <%= link_to(prototype_add_path(prototype), method: :delete, remote: true, id: :"like-button-#{prototype.id}") do %><%= prototype.likes.count %>
+
+<i class="fas fa-thumbs-up">いいね！済み</i>
+
+   <% end %>
+ <% else %> 
+   <%= link_to(prototype_add_path(prototype), method: :post, remote: true, id: :"like-button-#{prototype.id}") do %><%= prototype.likes.count %>
+
+<i class="far fa-thumbs-up">いいね！</i>
+
+   <% end %>
+ <% end %> 
