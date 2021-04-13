@@ -12,6 +12,6 @@ class User < ApplicationRecord
 
 # エラー要素
   has_many :likes, dependent: :destroy
-  has_many :like_prototypes, through: :likes, source: :prototype
+  has_many :prototype_likes, through: :likes, source: :prototype
 
 end
