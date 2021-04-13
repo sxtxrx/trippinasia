@@ -395,6 +395,46 @@ ul li::before {
   font-size: 10px;
 }
 
+/* aboutページ */
+.about-top {
+  position: relative;
+  font-family: 'HanziPen TC',cursive;
+  }
+
+.about-top p {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  font-size: 50px;
+  color: antiquewhite;
+  /*文字の装飾は省略*/    
+
+  }
+ 
+  /* .about-bottom p {
+    font-family: 'HanziPen TC',cursive;
+    font-size: 25px;
+  bottom: 25%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0; 
+  color: antiquewhite;
+  text-align: center;
+
+  } */
+
+.example img {
+  width: 100%;
+  }
+
 /* タブレット対応 */
 @media (max-width: 1024px) {
   .inner {

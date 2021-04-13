@@ -4,12 +4,11 @@ Rails.application.routes.draw do
   resources :prototypes do
     resources :comments, only: [:create,:destroy]
   end
-
-  resources :users, only: :show
-# 追加
   resources :prototypes do
     post 'add' => 'likes#create'
     delete '/add' => 'likes#destroy'
   end
-  
+
+  resources :users, only: :show
+  resources :abouts, only: :index
 end
