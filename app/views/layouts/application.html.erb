@@ -8,13 +8,17 @@
     <script src="https://kit.fontawesome.com/e0e9a80a94.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%# フォント %>
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+
+    <%#  %>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <header class="header">            
         <div class="nav">
-          <%= link_to image_tag("IMG_3477 (1) (1) 2.png", class: :logo), root_path %>
+          <%= link_to image_tag("IMG-2236.PNG", class: :logo), root_path %>
           <div class="nav__left">
           </div>
           <% if user_signed_in? %>
@@ -33,7 +37,7 @@
       
         </div>
         <div class="nav__rooms">
-              <%= link_to "trippin'asia", "https://www.google.co.jp/", class: :nav__about %>
+              <%= link_to "trippin'asia", abouts_path, class: :nav__about %>
               <%= link_to "Fun", "#", class: :nav__fun %>
               <%= link_to "Hotel", "#",class: :nav__hotel %>
               <%= link_to "Foods", "#", method: :delete, class: :nav__foods %>
