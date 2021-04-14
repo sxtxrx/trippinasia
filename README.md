@@ -56,11 +56,13 @@ belongs_to :prototype
 
 
 
- # アプリのの名前
-## trippin'asia
+ ## アプリの名前
+ trippin'asia
+
 
 ##使用ライブラリ、フレーム
-haml&css
+
+html&css
 JavaScript
 jQuery
 Ruby
