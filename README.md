@@ -60,15 +60,15 @@ belongs_to :prototype
  trippin'asia
 
 
-##使用ライブラリ、フレーム
+## 使用ライブラリ、フレーム
 
-html&css
-JavaScript
-jQuery
-Ruby
-Ruby on Rails
-MySqL
-AWS
+-html&css
+-JavaScript
+-jQuery
+-Ruby
+-Ruby on Rails
+-MySqL
+-AWS
 
 ## 簡単な説明
 
