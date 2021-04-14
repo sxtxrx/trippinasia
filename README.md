@@ -1,5 +1,10 @@
 # README
 
+ # ツール・ライブラリの名前
+
+## trippin'asia
+
+
 #users table
 
 | Column            | Type    | Options     |
@@ -52,10 +57,8 @@ belongs_to :user
 ### Association
 belongs_to :user
 belongs_to :prototype
-    
-    # ツール・ライブラリの名前
 
-trippin'asia
+
 
 ## 簡単な説明
 
@@ -89,5 +92,4 @@ satoru tomita
 
 sxtxrxfor.pg@gmail.com
 
-[
 
