@@ -1,10 +1,5 @@
 # README
 
- # ツール・ライブラリの名前
-
-## trippin'asia
-
-
 #users table
 
 | Column            | Type    | Options     |
@@ -60,13 +55,25 @@ belongs_to :prototype
 
 
 
+
+ ## アプリの名前
+ trippin'asia
+
+
+## 使用ライブラリ、フレーム
+
+-html&css
+-JavaScript
+-jQuery
+-Ruby
+-Ruby on Rails
+-MySqL
+-AWS
+
 ## 簡単な説明
 
 アジアを旅行する人のための写真付き情報交換サイト
 
-***デモ***
-
-![デモ][![Image from Gyazo](https://i.gyazo.com/cc37b0c8450b7700ff5076cd8795e8a9.gif)](https://gyazo.com/cc37b0c8450b7700ff5076cd8795e8a9)
 
 ## 機能
 - ユーザーログイン機能
@@ -75,7 +82,6 @@ belongs_to :prototype
 - コメント機能
 - "いいね"機能
 
-他の機能はこちらを参照して下さい。`awesome-tool --help`.
 
 ## 制作背景
 海外を旅する人にとって何より大切なのは情報です。私がアジアを旅をしていた頃にsnsなどで情報収集してもユーザーの思い出写真や加工したものが多く、ブログでは情報収集に手間がかかるため簡単に見れる写真付きの情報交換用サイトが欲しいと思い制作しました。綺麗な写真だけではなく、ネガティブなものも含めての"情報"を発信して次に訪れる人の為により安全で楽しい旅行の手助けになればと思います。
