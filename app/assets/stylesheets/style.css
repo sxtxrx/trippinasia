@@ -77,7 +77,7 @@ a {
   border: 1px orange solid;
   border-radius: 3px;
   transition: 0.4s ease;
-} */
+} 
 .nav__btn:hover{
   color: #fff;
   background: rgb(230, 162, 75);;
