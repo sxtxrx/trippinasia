@@ -6,6 +6,10 @@ class User < ApplicationRecord
          
   validates :name, presence: true
   validates :profile, presence: true
-  has_many :prototypes
-  has_many :comments
+  
+  has_many :prototypes,dependent: :destroy
+  has_many :comments,dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :prototype_likes, through: :likes, source: :prototype
+
 end

@@ -10,7 +10,7 @@
             <td class="table__col2"><%= @user.name %></td>
           </tr>
           <tr>
-            <th class="table__col1">biography</th>
+            <th class="table__col1">Profile</th>
             <td class="table__col2"><%= @user.profile %></td>
           </tr>
           
@@ -20,7 +20,7 @@
         <%= "#{@user.name}さんのPhotos"%>
       </h2>
       <div class="user__card">
-        <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
+        <%= render partial: 'prototypes/prototype', collection: @user.prototypes %>
       </div>
     </div>
   </div>
