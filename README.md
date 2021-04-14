@@ -1,10 +1,5 @@
 # README
 
- # ツール・ライブラリの名前
-
-## trippin'asia
-
-
 #users table
 
 | Column            | Type    | Options     |
@@ -60,13 +55,23 @@ belongs_to :prototype
 
 
 
+
+ # アプリのの名前
+## trippin'asia
+
+##使用ライブラリ、フレーム
+haml&css
+JavaScript
+jQuery
+Ruby
+Ruby on Rails
+MySqL
+AWS
+
 ## 簡単な説明
 
 アジアを旅行する人のための写真付き情報交換サイト
 
-***デモ***
-
-![デモ][![Image from Gyazo](https://i.gyazo.com/cc37b0c8450b7700ff5076cd8795e8a9.gif)](https://gyazo.com/cc37b0c8450b7700ff5076cd8795e8a9)
 
 ## 機能
 - ユーザーログイン機能
