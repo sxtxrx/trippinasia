@@ -83,8 +83,8 @@ belongs_to :prototype
 - "いいね"機能
 - 
 ## テスト用アカウント
-email: test@gmail.com
-password: 11111a
+- email: test@gmail.com
+- password: 11111a
 
 
 ## 制作背景
