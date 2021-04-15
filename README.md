@@ -58,7 +58,7 @@ belongs_to :prototype
 
  ## アプリの名前
  trippin'asia
-
+ URL:https://trippinasia.herokuapp.com/
 
 ## 使用ライブラリ、フレーム
 
