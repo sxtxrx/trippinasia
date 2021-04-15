@@ -59,4 +59,4 @@ gem 'pry-rails'
 gem 'active_hash'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
-
+gem "aws-sdk-s3", require: false

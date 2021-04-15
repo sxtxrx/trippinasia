@@ -221,7 +221,6 @@ body{
   text-decoration: underline;
 }
 
-/* フォーム系も調整 */
 
 
 /* 詳細ページ */
@@ -416,20 +415,7 @@ ul li::before {
 
   }
  
-  /* .about-bottom p {
-    font-family: 'HanziPen TC',cursive;
-    font-size: 25px;
-  bottom: 25%;
-  left: 50%;
-  -ms-transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  margin:0;
-  padding:0; 
-  color: antiquewhite;
-  text-align: center;
-
-  } */
+  
 
 .example img {
   width: 100%;

@@ -8,7 +8,6 @@ class Prototype < ApplicationRecord
 
     has_many :likes,dependent: :destroy
     has_many :users, through: :likes
-    # エラー直す
     def liked_by?(user)
     likes.where(user_id: user.id).exists?
     end
