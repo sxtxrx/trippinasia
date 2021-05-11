@@ -58,5 +58,8 @@ gem 'image_processing', '~> 1.2'
 gem 'pry-rails'
 gem 'active_hash'
 gem 'jquery-rails'
-gem 'jquery-turbolinks'
 gem "aws-sdk-s3", require: false
+gem 'ransack'
+group :development do
+  gem 'rubocop', require: false
+end

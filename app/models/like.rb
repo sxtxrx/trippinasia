@@ -1,7 +1,6 @@
 class Like < ApplicationRecord
-    belongs_to :user
-    belongs_to :prototype
+  belongs_to :user
+  belongs_to :prototype
 
-
-validates_uniqueness_of :prototype_id, scope: :user_id
+  validates_uniqueness_of :prototype_id, scope: :user_id
 end

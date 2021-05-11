@@ -6,6 +6,7 @@ class PrototypesController < ApplicationController
   def index
     @prototypes = Prototype.includes(:user)
   end
+
   def new
     @prototype = Prototype.new
   end
@@ -23,7 +24,7 @@ class PrototypesController < ApplicationController
     @comment = Comment.new
     @comments = @prototype.comments
   end
- 
+
   def update
     if @prototype.update(prototype_params)
       redirect_to prototype_path(@prototype)
@@ -33,17 +34,17 @@ class PrototypesController < ApplicationController
   end
 
   def destroy
-    if@prototype.destroy
+    if @prototype.destroy
       redirect_to root_path
     else
       redirect_to root_path
     end
   end
 
+  private
 
- private
   def prototype_params
-    params.require(:prototype).permit(:title,:image,:country_id,:information,:access).merge(user_id: current_user.id)
+    params.require(:prototype).permit(:title, :image, :country_id, :information, :access).merge(user_id: current_user.id)
   end
 
   def set_prototype
@@ -52,7 +53,5 @@ class PrototypesController < ApplicationController
 
   def contributor_confirmation
     redirect_to root_path unless current_user == @prototype.user
-    
   end
 end
-

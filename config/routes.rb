@@ -3,12 +3,12 @@ Rails.application.routes.draw do
   root to: "prototypes#index"
   resources :prototypes do
     resources :comments, only: [:create,:destroy]
+    resources :prototypes
+      post 'add' => 'likes#create'
+      delete '/add' => 'likes#destroy'
+    
   end
-  resources :prototypes do
-    post 'add' => 'likes#create'
-    delete '/add' => 'likes#destroy'
-  end
+  get 'prototypes/search'
 
   resources :users, only: :show
-  resources :abouts, only: :index
 end

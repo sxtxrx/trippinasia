@@ -10,16 +10,16 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%# フォント %>
     <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
-
-    
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
   </head>
 
-  <body>
-    <header class="header">            
+  <body>      
+
+    <header class="header">   
+             <div class="inner">
         <div class="nav">
-          <%= link_to image_tag("IMG-2236.PNG", class: :logo), root_path %>
           <div class="nav__left">
+          <%= link_to image_tag("IMG-2236.PNG", class: :logo), root_path %>
           </div>
           <% if user_signed_in? %>
             <div class="nav__right">
@@ -32,17 +32,18 @@
               <%= link_to "Sign-Up", new_user_registration_path, class: :nav__sign_up %>
             </div>
           <% end %>
-        </div>      
-      <div class="inner">
-      
-        </div>
-        <div class="nav__rooms">
+        </div>  
+
+      <%# 追加実装 %>
+        <%# </div> %>
+        <%# <div class="nav__rooms">
               <%= link_to "trippin'asia", abouts_path, class: :nav__about %>
-              <%= link_to "Fun", "#", class: :nav__fun %>
-              <%= link_to "Hotel", "#",class: :nav__hotel %>
-              <%= link_to "Foods", "#", method: :delete, class: :nav__foods %>
-              <%= link_to "Goods", "#", class: :nav__negative%>
-        </div>
+              <%# <%= link_to "Fun", "#", class: :nav__fun %>
+              <%# <%= link_to "Hotel", "#",class: :nav__hotel %> 
+              <%# <%= link_to "Foods", "#", method: :delete, class: :nav__foods %> 
+              <%# <%= link_to "Goods", "#", class: :nav__negative%> 
+        <%# </div>  %>
+        
     </header>
     <%= yield %>
     <footer class="footer">
