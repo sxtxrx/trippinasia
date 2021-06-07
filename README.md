@@ -80,7 +80,7 @@ belongs_to :prototype
 - 写真投稿機能
 - コメント機能
 - "いいね"機能
-- 
+- 今後ジャンルごとの表示機能を追加予定
 ## テスト用アカウント
 - email: test@gmail.com
 - password: 11111a
