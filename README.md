@@ -1,57 +1,5 @@
 # README
 
-#users table
-
-| Column            | Type    | Options     |
-| --------          | ------  | ----------- |
-| name          | string  |null: false  |
-| email             | string  |null: false ,unique: true|
-| encrypted_password| string  |null: false  | 
-|profile            | text   |null: false  | 
-### Association
-has_many :prototypes,dependent: :destroy
-  has_many :comments,dependent: :destroy
-  has_many :likes, dependent: :destroy
-  has_many :prototype_likes, through: :likes, source: :prototype
-
-
-#prototypes table
-| Column            | Type          | Options      |
-| --------          | ------        | -----------  | 
-|title             | string        | null: false  |
-|country            | integer       | null: false  |
-|information        | text          | null: false  | 
-|access          | text       | null:false|     
-|user               | reference     |foreign key :true| 
-### Association
-belongs_to :country
-belongs_to :user
-has_many :comments,dependent: :destroy
-has_one_attached :image
-has_many :likes,dependent: :destroy
-has_many :users, through: :likes
-
-
-
-#comments table
-| Column            | Type       | Options    |
-| --------          | ------     | ---------- |
-|prototype_id      | reference    |foreign key |
-|user_id           |reference   |foreign key |
-### Association
-belongs_to :prototype
-belongs_to :user
-
-
-
-＃likes table
-| Column         | Type      | Options     |
-| --------       | ------    | ----------- |
-|prototype_id      | reference    |foreign key |
-|user_id           |reference   |foreign key |
-### Association
-belongs_to :user
-belongs_to :prototype
 
 
 
@@ -107,5 +55,58 @@ https://github.com/sxtxrx/trippinasia.git
 satoru tomita
 
 sxtxrxfor.pg@gmail.com
+
+#users table
+
+| Column            | Type    | Options     |
+| --------          | ------  | ----------- |
+| name          | string  |null: false  |
+| email             | string  |null: false ,unique: true|
+| encrypted_password| string  |null: false  | 
+|profile            | text   |null: false  | 
+### Association
+has_many :prototypes,dependent: :destroy
+  has_many :comments,dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :prototype_likes, through: :likes, source: :prototype
+
+
+#prototypes table
+| Column            | Type          | Options      |
+| --------          | ------        | -----------  | 
+|title             | string        | null: false  |
+|country            | integer       | null: false  |
+|information        | text          | null: false  | 
+|access          | text       | null:false|     
+|user               | reference     |foreign key :true| 
+### Association
+belongs_to :country
+belongs_to :user
+has_many :comments,dependent: :destroy
+has_one_attached :image
+has_many :likes,dependent: :destroy
+has_many :users, through: :likes
+
+
+
+#comments table
+| Column            | Type       | Options    |
+| --------          | ------     | ---------- |
+|prototype_id      | reference    |foreign key |
+|user_id           |reference   |foreign key |
+### Association
+belongs_to :prototype
+belongs_to :user
+
+
+
+＃likes table
+| Column         | Type      | Options     |
+| --------       | ------    | ----------- |
+|prototype_id      | reference    |foreign key |
+|user_id           |reference   |foreign key |
+### Association
+belongs_to :user
+belongs_to :prototype
 
 
