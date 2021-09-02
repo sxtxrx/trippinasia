@@ -11,14 +11,10 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :profile
-  
 
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates :email, { presence: true, uniqueness: { case_sensitive: false } }
+    VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+    validates :email, { presence: true, uniqueness: { case_sensitive: false } }
   end
-
-
-
 
   has_many :prototypes, dependent: :destroy
   has_many :comments, dependent: :destroy

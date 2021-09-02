@@ -15,7 +15,6 @@ class CommentsController < ApplicationController
     end
   end
 
-
   def destroy
     if @comment.destroy
       redirect_to prototype_path(@comment.prototype_id)
